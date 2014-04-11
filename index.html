@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="App">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Mundial 2014</title>        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
+        <script type="text/javascript" src="controller.js"></script>
+    </head>
+    <body>
+        
+        <div ng-controller="MundialCtrl">
+            
+            <div ng-repeat="grupo in mundial.grupos">
+                {{grupo.nombre}}
+                
+                <ul>   
+                    <li ng-repeat="partido in grupo.partidos">
+
+                        <div>
+                        {{partido.id}} - {{partido.local}} vs {{partido.visitante}}
+                        {{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}
+                        </div>
+                    </li>     
+                </ul>
+            </div>
+            
+        </div>        
+
+    </body>
+</html>

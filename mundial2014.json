@@ -1,0 +1,60 @@
+{
+	"equipos":[
+		{"id": 1, "nombre":"Brasil", "name":"Brazil", "nombreCorto":"bra", "flag":"br"},
+		{"id": 2, "nombre":"Croacia", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 3, "nombre":"Mexico", "name":"Croatia", "nombreCorto":"cro", "flag":"mx"},
+		{"id": 4, "nombre":"Camerun", "name":"Croatia", "nombreCorto":"cro", "flag":"cm"},
+		{"id": 5, "nombre":"España", "name":"Croatia", "nombreCorto":"cro", "flag":"es"},
+		{"id": 6, "nombre":"Paises Bajos", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 7, "nombre":"Chile", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 8, "nombre":"Australia", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 9, "nombre":"Colombia", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 10, "nombre":"Grecia", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 11, "nombre":"Costa de Marfil", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 12, "nombre":"Japon", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 13, "nombre":"Uruguay", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 14, "nombre":"Costa Rica", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 15, "nombre":"Inglaterra", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 16, "nombre":"Italia", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 17, "nombre":"Suiza", "name":"Brazil", "nombreCorto":"bra", "flag":"br"},
+		{"id": 18, "nombre":"Ecuador", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 19, "nombre":"Francia", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 20, "nombre":"Honduras", "name":"Croatia", "nombreCorto":"cro", "flag":"br", "flag":"br"},
+		{"id": 21, "nombre":"Argentina", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 22, "nombre":"Bosnia y Herzegovina", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 23, "nombre":"Iran", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 24, "nombre":"Nigeria", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 25, "nombre":"Alemania", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 26, "nombre":"Portugal", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 27, "nombre":"Ghana", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 28, "nombre":"EEUU", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 29, "nombre":"Belgica", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 30, "nombre":"Argelia", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 31, "nombre":"Rusia", "name":"Croatia", "nombreCorto":"cro", "flag":"br"},
+		{"id": 32, "nombre":"Republica de Corea", "name":"Croatia", "nombreCorto":"cro", "flag":"br"}
+	],
+
+	"grupos": [
+		{	
+			"nombre": "Grupo A",
+			"partidos":[
+				{"id":1, "ronda":1, "fecha":"12-6-2014","local":1,"visitante":2 },
+				{"id":2, "ronda":1, "fecha":"13-6-2014","local":3,"visitante":4 },
+				{"id":17, "ronda":1, "fecha":"17-6-2014","local":1,"visitante":3 },
+				{"id":18, "ronda":1, "fecha":"19-6-2014","local":4,"visitante":2 },
+				{"id":33, "ronda":1, "fecha":"23-6-2014","local":4,"visitante":1 },
+				{"id":34, "ronda":1, "fecha":"23-6-2014","local":2,"visitante":3 }
+			]
+		},{	
+			"nombre": "Grupo B",
+			"partidos":[
+				{"id":1, "ronda":1, "fecha":"12-6-2014","local":1,"visitante":2 },
+				{"id":2, "ronda":1, "fecha":"13-6-2014","local":3,"visitante":4 },
+				{"id":17, "ronda":1, "fecha":"17-6-2014","local":1,"visitante":3 },
+				{"id":18, "ronda":1, "fecha":"19-6-2014","local":4,"visitante":2 },
+				{"id":33, "ronda":1, "fecha":"23-6-2014","local":4,"visitante":1 },
+				{"id":34, "ronda":1, "fecha":"23-6-2014","local":2,"visitante":3 }
+			]
+		}
+	]
+}
