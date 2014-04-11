@@ -12,19 +12,51 @@
             
             <div ng-repeat="grupo in mundial.grupos">
                 {{grupo.nombre}}
-                
-                <ul>   
-                    <li ng-repeat="partido in grupo.partidos">
+                <div>                
+                    <ul>   
+                        <li ng-repeat="partido in grupo.partidos">
 
-                        <div>
-                        {{partido.id}} - {{partido.local}} vs {{partido.visitante}}
-                        {{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}
-                        </div>
-                    </li>     
-                </ul>
+                            <div>
+                                {{partido.id}} - {{partido.local}} vs {{partido.visitante}}
+                                {{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}
+                                <input type="text" ng-model="yourName" placeholder="0">
+                                
+                            </div>
+                        </li>     
+                    </ul>                    
+                </div>
+                <div>
+
+                    <table>
+                        <tr>
+                            <th> Equipo </th> 
+                            <th> PJ </th> 
+                            <th> G </th> 
+                            <th> E </th> 
+                            <th> P </th> 
+                            <th> Gf </th> 
+                            <th> Gc </th> 
+                            <th> Puntos </th>
+                        </tr>
+                        <tr ng-repeat="equipo in grupo.equipos">
+                            <td> {{findEquipo(equipo.id)}} </td> 
+                            <td> {{yourName}} </td> 
+                            <th> 0 </td>
+                            <th> 0 </td>
+                            <th> 0 </td>
+                            <th> 0 </td>
+                            <th> 0 </td>
+                            <th> 0 </td>
+                        </tr>
+                    </table>    
+                </div>
             </div>
             
-        </div>        
+        </div>  
+
+        <div ng-controller="ResultadoCtrl">
+            {{test()}}
+        </div>      
 
     </body>
 </html>
