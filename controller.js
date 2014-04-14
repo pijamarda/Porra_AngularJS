@@ -2,10 +2,20 @@ var App = angular.module('App', []);
 
 App.controller('MundialCtrl', function($scope, $http) 
 {
+
+	$scope.mundial = {};
+	$scope.partidos = {};
+
 	$http.get('mundial2014.json')
 		.then(function(res)
 		{
 		  $scope.mundial = res.data;                
+		});
+
+	$http.get('resultado.json')
+		.then(function(res)
+		{
+		  $scope.partidos = res.data;                
 		});
 
 	$scope.findEquipo = function(equipo) {
@@ -14,24 +24,19 @@ App.controller('MundialCtrl', function($scope, $http)
 	    		return $scope.mundial.equipos[i].nombre;
 	};
 
+	$scope.findEquipoLocal = function(partido) {
+		//console.log($scope.partidos.resultados.length)
 
-});
+		var resultados = $scope.partidos.resultados;
 
-App.controller('ResultadoCtrl', function($scope, $http) 
-{
-	$http.get('resultado.json')
-		.then(function(res)
-		{
-		  $scope.partidos = res.data;
-		  console.log($scope.partidos);
-		});
-	
-
-	$scope.test = function() {
-		//return $scope.partidos;
-		//for (var i=0; i<$scope.partidos.resultados.length; i++)	
-		    return $scope.partidos.resultados;//$scope.partidos.resultados[i].id;
-
+		if (resultados)
+			for (var i=0; i<resultados.length; i++)
+		    	if (resultados[i].id == partido)
+		    		return resultados[i].local;
+		    	//console.log(j);//$scope.partidos.resultados.length)
+	    		
 	};
-	
+
+
 });
+

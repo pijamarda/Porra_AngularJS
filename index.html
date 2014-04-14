@@ -8,7 +8,7 @@
     </head>
     <body>
         
-        <div ng-controller="MundialCtrl">
+        <div ng-controller="MundialCtrl">            
             
             <div ng-repeat="grupo in mundial.grupos">
                 {{grupo.nombre}}
@@ -20,6 +20,7 @@
                                 {{partido.id}} - {{partido.local}} vs {{partido.visitante}}
                                 {{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}
                                 <input type="text" ng-model="yourName" placeholder="0">
+                                Busco el partido: {{partido.id}} - Encuentro: {{findEquipoLocal(partido.id)}}
                                 
                             </div>
                         </li>     
@@ -51,12 +52,10 @@
                     </table>    
                 </div>
             </div>
+           
             
-        </div>  
-
-        <div ng-controller="ResultadoCtrl">
-            {{test()}}
-        </div>      
+            
+        </div>              
 
     </body>
 </html>
