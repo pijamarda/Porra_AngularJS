@@ -19,10 +19,15 @@
                             <div>
                                 {{partido.id}} - {{partido.local}} vs {{partido.visitante}}
                                 {{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}
-                                <input type="text" ng-model="yourName" placeholder="0">
-                                Busco el partido: {{partido.id}} - Encuentro: {{findEquipoLocal(partido.id)}}
-                                
+                                <div>
+                                <input type="number" ng-model="partido.golLocal">
+                                <input type="number" ng-model="partido.golVisitante">
+
+                                </div>
+
+                                                                
                             </div>
+                            
                         </li>     
                     </ul>                    
                 </div>
@@ -41,13 +46,13 @@
                         </tr>
                         <tr ng-repeat="equipo in grupo.equipos">
                             <td> {{findEquipo(equipo.id)}} </td> 
-                            <td> {{yourName}} </td> 
-                            <th> 0 </td>
-                            <th> 0 </td>
-                            <th> 0 </td>
-                            <th> 0 </td>
-                            <th> 0 </td>
-                            <th> 0 </td>
+                            <td> {{calculaPartidosJugados(equipo.id)}} </td> 
+                            <th> {{calculaGanados(equipo.id)}} </td>
+                            <th> {{calculaEmpatados(equipo.id)}} </td>
+                            <th> {{calculaPerdidos(equipo.id)}} </td>
+                            <th> {{calculaGolesFavor(equipo.id)}} </td>
+                            <th> {{calculaGolesContra(equipo.id)}} </td>
+                            <th> {{calculaPuntos(equipo.id)}} </td>
                         </tr>
                     </table>    
                 </div>

@@ -1,6 +1,6 @@
 {
 	"resultados":[
-		{"id":1,"local": 2,"visitante": 0},
+		{"id":1,"local": 2,"visitante": 3},
 		{"id":2,"local": 1,"visitante": 0},
 		{"id":3,"local": 1,"visitante": 3},
 		{"id":4,"local": 0,"visitante": 4},
@@ -63,6 +63,6 @@
 		{"id":61,"local": 2,"visitante": 0},
 		{"id":62,"local": 2,"visitante": 0},
 		{"id":63,"local": 2,"visitante": 0},
-		{"id":64,"local": 2,"visitante": 0}	
+		{"id":64,"local": 25,"visitante": 26}	
 	]
 }
