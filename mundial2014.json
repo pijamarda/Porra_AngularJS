@@ -45,7 +45,8 @@
 				{"id":18, "ronda":1, "fecha":"19-6-2014","local":4,"visitante":2 },
 				{"id":33, "ronda":1, "fecha":"23-6-2014","local":4,"visitante":1 },
 				{"id":34, "ronda":1, "fecha":"23-6-2014","local":2,"visitante":3 }
-			]
+			],
+			"pasan":[{"id":1},{"id":2}]
 		},{	
 			"nombre": "Grupo B",
 			"equipos": [{"id":5},{"id":6},{"id":7},{"id":8}],
@@ -56,7 +57,8 @@
 				{"id":19, "ronda":1, "fecha":"19-6-2014","local":8,"visitante":6 },
 				{"id":35, "ronda":1, "fecha":"23-6-2014","local":8,"visitante":5 },
 				{"id":36, "ronda":1, "fecha":"23-6-2014","local":6,"visitante":7 }
-			]
+			],
+			"pasan":[{"id":5},{"id":6}]
 		},{	
 			"nombre": "Grupo C",
 			"equipos": [{"id":9},{"id":10},{"id":11},{"id":12}],
@@ -67,7 +69,8 @@
 				{"id":22, "ronda":1, "fecha":"19-6-2014","local":12,"visitante":10 },
 				{"id":37, "ronda":1, "fecha":"23-6-2014","local":12,"visitante":9 },
 				{"id":38, "ronda":1, "fecha":"23-6-2014","local":10,"visitante":11 }
-			]
+			],
+			"pasan":[{"id":9},{"id":10}]
 		},{	
 			"nombre": "Grupo D",
 			"equipos": [{"id":13},{"id":14},{"id":15},{"id":16}],
@@ -78,7 +81,8 @@
 				{"id":24, "ronda":1, "fecha":"19-6-2014","local":16,"visitante":14 },
 				{"id":39, "ronda":1, "fecha":"23-6-2014","local":16,"visitante":13 },
 				{"id":40, "ronda":1, "fecha":"23-6-2014","local":14,"visitante":15 }
-			]
+			],
+			"pasan":[{"id":13},{"id":14}]
 		},{	
 			"nombre": "Grupo E",
 			"equipos": [{"id":17},{"id":18},{"id":19},{"id":20}],
@@ -89,7 +93,8 @@
 				{"id":26, "ronda":1, "fecha":"19-6-2014","local":20,"visitante":18 },
 				{"id":41, "ronda":1, "fecha":"23-6-2014","local":20,"visitante":17 },
 				{"id":42, "ronda":1, "fecha":"23-6-2014","local":18,"visitante":19 }
-			]
+			],
+			"pasan":[{"id":17},{"id":18}]
 		},{	
 			"nombre": "Grupo F",
 			"equipos": [{"id":21},{"id":22},{"id":23},{"id":24}],
@@ -100,7 +105,8 @@
 				{"id":28, "ronda":1, "fecha":"19-6-2014","local":24,"visitante":22 },
 				{"id":43, "ronda":1, "fecha":"23-6-2014","local":24,"visitante":21 },
 				{"id":44, "ronda":1, "fecha":"23-6-2014","local":22,"visitante":23 }
-			]
+			],
+			"pasan":[{"id":21},{"id":22}]
 		},{	
 			"nombre": "Grupo G",
 			"equipos": [{"id":25},{"id":26},{"id":27},{"id":28}],
@@ -111,7 +117,8 @@
 				{"id":30, "ronda":1, "fecha":"19-6-2014","local":28,"visitante":26 },
 				{"id":45, "ronda":1, "fecha":"23-6-2014","local":28,"visitante":25 },
 				{"id":46, "ronda":1, "fecha":"23-6-2014","local":26,"visitante":27 }
-			]
+			],
+			"pasan":[{"id":25},{"id":26}]
 		},{	
 			"nombre": "Grupo H",
 			"equipos": [{"id":29},{"id":30},{"id":31},{"id":32}],
@@ -122,7 +129,8 @@
 				{"id":32, "ronda":1, "fecha":"19-6-2014","local":32,"visitante":30 },
 				{"id":47, "ronda":1, "fecha":"23-6-2014","local":32,"visitante":29 },
 				{"id":48, "ronda":1, "fecha":"23-6-2014","local":30,"visitante":31 }
-			]
+			],
+			"pasan":[{"id":29},{"id":30}]
 		}
 	],
 
