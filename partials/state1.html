@@ -1,0 +1,56 @@
+<!-- partials/state1.html -->
+<h1>Fase de grupos</h1>
+<hr/>
+<div ng-controller="MundialCtrl"> 
+    <div ng-repeat="grupo in mundial.content.grupos">
+        <h2>{{grupo.nombre}}</h2>
+        <div class="row">                    
+            <div class="col-md-4">                
+                <ul>   
+                    <li ng-repeat="partido in grupo.partidos">
+                        <h5>{{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}</h5>
+                        <div class="form-inline">                                
+                            
+                            <div class="form-group" >                                    
+                                <input type="number" class="form-control" ng-model="partido.golLocal">
+                            </div>
+                            <div class="form-group" >                                
+                                <input type="number" class="form-control" ng-model="partido.golVisitante">
+                            </div>                                                             
+                        </div>
+                        
+                    </li>     
+                </ul>                    
+            </div>
+            <div class="col-md-4" style="padding-top:30px">
+                <table class="table table-striped">
+                    <tr>
+                        <th> Equipo </th> 
+                        <th> PJ </th> 
+                        <th> G </th> 
+                        <th> E </th> 
+                        <th> P </th> 
+                        <th> Gf </th> 
+                        <th> Gc </th> 
+                        <th> Puntos </th>
+                        <th> Puntos - Binded </th>
+                    </tr>
+                    <tr ng-repeat="equipo in grupo.equipos">
+                        <td> {{findEquipo(equipo.id)}} </td> 
+                        <td> {{calculaPartidosJugados(equipo.id)}} </td> 
+                        <td> {{calculaGanados(equipo.id)}} </td>
+                        <td> {{calculaEmpatados(equipo.id)}} </td>
+                        <td> {{calculaPerdidos(equipo.id)}} </td>
+                        <td> {{calculaGolesFavor(equipo.id)}} </td>
+                        <td> {{calculaGolesContra(equipo.id)}} </td>
+                        <td> {{calculaPuntos(equipo.id)}} </td>
+                        <td> {{equipo.puntos}} </td>
+                    </tr>
+                    <div ng-repeat="team in grupo.pasan">
+                    	{{team.id}} - {{findEquipo(team.id)}}
+                    </div>
+                </table>    
+            </div>
+        </div>
+    </div>  
+</div> 
