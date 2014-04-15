@@ -1,4 +1,5 @@
-var App = angular.module('App', []);
+var App = angular.module('App', ['ui.router']);
+
 
 App.controller('MundialCtrl', function($scope, $http) 
 {
@@ -286,3 +287,4 @@ App.controller('MundialCtrl', function($scope, $http)
 
 
 });
+

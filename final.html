@@ -7,12 +7,11 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
         
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
-        <script src="js/angular-ui-router.js"></script>
-        <script src="js/controller.js"></script>
+        <script type="text/javascript" src="controller.js"></script>
     </head>
     <body>
-                
-        <div ng-controller="MundialCtrl">            
+        
+        <div ng-controller="FinalCtrl">            
             
             <div ng-repeat="grupo in mundial.grupos">
                 <h2>{{grupo.nombre}}</h2>
@@ -20,7 +19,7 @@
                     <div class="col-md-4">                
                         <ul>   
                             <li ng-repeat="partido in grupo.partidos">
-                                <h5>{{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}</h5>
+                                
                                 <div class="form-inline">                                
                                     
                                     <div class="form-group" >                                    
@@ -49,14 +48,7 @@
                                 <th> Puntos </th>
                             </tr>
                             <tr ng-repeat="equipo in grupo.equipos">
-                                <td> {{findEquipo(equipo.id)}} </td> 
-                                <td> {{calculaPartidosJugados(equipo.id)}} </td> 
-                                <td> {{calculaGanados(equipo.id)}} </td>
-                                <td> {{calculaEmpatados(equipo.id)}} </td>
-                                <td> {{calculaPerdidos(equipo.id)}} </td>
-                                <td> {{calculaGolesFavor(equipo.id)}} </td>
-                                <td> {{calculaGolesContra(equipo.id)}} </td>
-                                <td> {{calculaPuntos(equipo.id)}} </td>
+                                {{equipo.name}}
                             </tr>
                         </table>    
                     </div>
