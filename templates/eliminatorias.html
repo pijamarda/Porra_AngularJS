@@ -4,12 +4,17 @@
 <div ng-controller="MundialCtrl">
 
     <div class="container">
+        
         <div class="row">
-        <div class="col-md-2">
+            
+            <div class="col-md-2">
                     <div class="form-group">
-                        <label for="" class="control-label">1{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</label>
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 49 1A vs 2B -->                            
+                            {{mundial.content.eliminatorias.seeds[0].nombreLocal}}
+                        </label>
                         <div class="input-group"> 
-                            <span class="input-group-addon">1º A</span>                     
+                            <span class="input-group-addon">1A</span>                     
                         <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
                         </div>
                     </div>                    
@@ -17,15 +22,20 @@
                           
         </div>
 
+        
         <div class="row">
+            
             <div class="col-md-2">  </div>                                        
             
              <div class="col-md-2">
                     <div class="form-group">
-                        <label for="" class="control-label">{{mundial.content.eliminatorias.cuartos[0].local}} {{mundial.content.eliminatorias.cuartos[0].nombreLocal}}</label>
+                        <label for="" class="control-label">
+                            <!--CUARTOS - Partido 57 W49 vs W50 -->                            
+                            {{mundial.content.eliminatorias.cuartos[0].nombreLocal}}
+                        </label>
                         <div class="input-group"> 
                             <span class="input-group-addon">W49</span>                     
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golVisitante">
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.cuartos[0].golLocal">
                         </div>
                     </div>                    
              </div>
@@ -35,9 +45,13 @@
         <div class="row">
             <div class="col-md-2">
                     <div class="form-group">
-                        <label for="" class="control-label">{{mundial.content.eliminatorias.seeds[0].visitante}} {{mundial.content.eliminatorias.seeds[0].nombreVisitante}}</label>
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 49 1A vs 2B -->
+                            
+                            {{mundial.content.eliminatorias.seeds[0].nombreVisitante}}
+                        </label>
                         <div class="input-group"> 
-                            <span class="input-group-addon">2º B</span>                     
+                            <span class="input-group-addon">2B</span>                     
                         <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golVisitante">
                         </div>
                     </div>                    
@@ -51,10 +65,14 @@
               
              <div class="col-md-2">
                     <div class="form-group">
-                        <label for="" class="control-label">{{mundial.content.eliminatorias.seeds[0].visitante}} {{mundial.content.eliminatorias.seeds[0].nombreVisitante}}</label>
+                        <label for="" class="control-label">
+                            <!--SEMIS - Partido 61 W57 vs W58 -->
+                            
+                            {{mundial.content.eliminatorias.semis[0].nombreLocal}}
+                        </label>
                         <div class="input-group"> 
                             <span class="input-group-addon">W57</span>                     
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golVisitante">
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.semis[0].golLocal">
                         </div>
                     </div>                    
              </div>
@@ -62,9 +80,16 @@
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 50 1C vs 2D -->
+                            
+                            {{mundial.content.eliminatorias.seeds[1].nombreLocal}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">1C</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[1].golLocal">
+                        </div>
                     </div>                    
              </div>                
         </div>
@@ -73,9 +98,15 @@
             <div class="col-md-2">  </div>                                        
             
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--CUARTOS - Partido 57 W49 vs W50 -->                            
+                            {{mundial.content.eliminatorias.cuartos[0].nombreVisitante}}
+                        </label>
+                        <div class="input-group"> 
+                            <span class="input-group-addon">W50</span>                     
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.cuartos[0].golVisitante">
+                        </div>
                     </div>                    
              </div>
                 
@@ -83,9 +114,15 @@
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 50 1C vs 2D -->                            
+                            {{mundial.content.eliminatorias.seeds[1].nombreVisitante}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">2D</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[1].golVisitante">
+                        </div>
                     </div>                    
              </div>             
         </div> 
@@ -97,39 +134,66 @@
               <div class="col-md-2"></div>                                   
               
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--FINAL - Partido 64 W61 vs W62 -->
+                            {{mundial.content.eliminatorias.final.local}} 
+                            {{mundial.content.eliminatorias.final.nombreLocal}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">W61</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.final.golLocal">
+                        </div>
                     </div>                   
              </div>
         </div>
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 53 1E vs 2F -->
+                            {{mundial.content.eliminatorias.seeds[4].local}} 
+                            {{mundial.content.eliminatorias.seeds[4].nombreLocal}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">1E</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[4].golLocal">
+                        </div>
                     </div>                    
              </div>                
         </div>
 
         <div class="row">
             <div class="col-md-2">  </div>                                        
-            
-             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
-                    </div>                    
-             </div>
+                <div class="col-md-2">
+                 <div class="form-group">
+                    <label for="" class="control-label">
+                        <!--CUARTOS - Partido 58 W53 vs W54 -->
+                        {{mundial.content.eliminatorias.cuartos[1].local}} 
+                        {{mundial.content.eliminatorias.cuartos[1].nombreLocal}}
+                    </label>
+                    <div class="input-group"> 
+                        <span class="input-group-addon">W53</span>                     
+                    <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.cuartos[1].golLocal">
+                    </div>
+                </div>
+            </div>
                 
         </div> 
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 53 1E vs 2F -->
+                            {{mundial.content.eliminatorias.seeds[4].visitante}} 
+                            {{mundial.content.eliminatorias.seeds[4].nombreVisitante}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">2F</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[4].golVisitante">
+                        </div>
                     </div>                    
              </div>             
         </div> 
@@ -140,18 +204,32 @@
               <div class="col-md-2"></div>                                    
               
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--SEMIS - Partido 61 W57 vs W58 -->
+                            {{mundial.content.eliminatorias.semis[0].visitante}} 
+                            {{mundial.content.eliminatorias.semis[0].nombreVisitante}}
+                        </label>
+                        <div class="input-group"> 
+                            <span class="input-group-addon">W58</span>                     
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.semis[0].golVisitante">
+                        </div>
                     </div>                   
              </div>
         </div>
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 54 1G vs 2H -->
+                            {{mundial.content.eliminatorias.seeds[5].local}} 
+                            {{mundial.content.eliminatorias.seeds[5].nombreLocal}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">1G</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[5].golLocal">
+                        </div>
                     </div>                    
              </div>                
         </div>
@@ -160,19 +238,33 @@
             <div class="col-md-2">  </div>                                        
             
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
-                    </div>                    
+                    <div class="form-group">
+                    <label for="" class="control-label">
+                        <!--CUARTOS - Partido 58 W53 vs W54 -->
+                        {{mundial.content.eliminatorias.cuartos[1].visitante}} 
+                        {{mundial.content.eliminatorias.cuartos[1].nombreVisitante}}
+                    </label>
+                    <div class="input-group"> 
+                        <span class="input-group-addon">W54</span>                     
+                    <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.cuartos[1].golVisitante">
+                    </div>
+                </div>                    
              </div>
                 
         </div> 
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 54 1G vs 2H -->
+                            {{mundial.content.eliminatorias.seeds[5].visitante}} 
+                            {{mundial.content.eliminatorias.seeds[5].nombreVisitante}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">2H</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[5].golVisitante">
+                        </div>
                     </div>                    
              </div>             
         </div>
@@ -185,29 +277,48 @@
             
              <div class="col-md-2">
                     <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                        <span class="input-group-addon">
+                            CAMPEON: {{mundial.content.eliminatorias.primero.nombre}}
+                        </span>
                     </div>                    
              </div>
                 
         </div> 
 
         <div class="row">
+            
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 51 1B vs 2A -->
+                            {{mundial.content.eliminatorias.seeds[2].local}} 
+                            {{mundial.content.eliminatorias.seeds[2].nombreLocal}}
+                        </label>
+                        <div class="input-group"> 
+                            <span class="input-group-addon">1B</span>                     
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[2].golLocal">
+                        </div>
                     </div>                    
-             </div>                
+             </div>
+                          
         </div>
 
+        
         <div class="row">
+            
             <div class="col-md-2">  </div>                                        
             
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--CUARTOS - Partido 59 W51 vs W52 -->
+                            {{mundial.content.eliminatorias.cuartos[2].local}} 
+                            {{mundial.content.eliminatorias.cuartos[2].nombreLocal}}
+                        </label>
+                        <div class="input-group"> 
+                            <span class="input-group-addon">W51</span>                     
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.cuartos[2].golLocal">
+                        </div>
                     </div>                    
              </div>
                 
@@ -215,9 +326,16 @@
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 51 1B vs 2A -->
+                            {{mundial.content.eliminatorias.seeds[2].visitante}} 
+                            {{mundial.content.eliminatorias.seeds[2].nombreVisitante}}
+                        </label>
+                        <div class="input-group"> 
+                            <span class="input-group-addon">2º A</span>                     
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[2].golVisitante">
+                        </div>
                     </div>                    
              </div>             
         </div> 
@@ -225,21 +343,35 @@
         <div class="row">
             <div class="col-md-2"></div>
                                        
-              <div class="col-md-2"></div>                                    
+            <div class="col-md-2"></div>                                    
               
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
-                    </div>                   
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--SEMIS - Partido 62 W59 vs W60 -->
+                            {{mundial.content.eliminatorias.semis[1].local}} 
+                            {{mundial.content.eliminatorias.semis[1].nombreLocal}}
+                        </label>
+                        <div class="input-group"> 
+                            <span class="input-group-addon">W59</span>                     
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.semis[1].golLocal">
+                        </div>
+                    </div>                    
              </div>
         </div>
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 52 1D vs 2C -->
+                            {{mundial.content.eliminatorias.seeds[3].local}} 
+                            {{mundial.content.eliminatorias.seeds[3].nombreLocal}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">1D</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[3].golLocal">
+                        </div>
                     </div>                    
              </div>                
         </div>
@@ -248,9 +380,16 @@
             <div class="col-md-2">  </div>                                        
             
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--CUARTOS - Partido 59 W51 vs W52 -->
+                            {{mundial.content.eliminatorias.cuartos[2].visitante}} 
+                            {{mundial.content.eliminatorias.cuartos[2].nombreVisitante}}
+                        </label>
+                        <div class="input-group"> 
+                            <span class="input-group-addon">W52</span>                     
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.cuartos[2].golVisitante">
+                        </div>
                     </div>                    
              </div>
                 
@@ -258,9 +397,16 @@
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 52 1D vs 2C -->
+                            {{mundial.content.eliminatorias.seeds[3].visitante}} 
+                            {{mundial.content.eliminatorias.seeds[3].nombreVisitante}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">2C</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[3].golVisitante">
+                        </div>
                     </div>                    
              </div>             
         </div> 
@@ -272,39 +418,66 @@
               <div class="col-md-2"></div>                                   
               
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--FINAL - Partido 64 W61 vs W62 -->
+                            {{mundial.content.eliminatorias.final.visitante}} 
+                            {{mundial.content.eliminatorias.final.nombreVisitante}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">W62</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.final.golVisitante">
+                        </div>
                     </div>                   
              </div>
         </div>
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 55 1F vs 2E -->
+                            {{mundial.content.eliminatorias.seeds[6].local}} 
+                            {{mundial.content.eliminatorias.seeds[6].nombreLocal}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">1F</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[6].golLocal">
+                        </div>
                     </div>                    
              </div>                
         </div>
 
         <div class="row">
             <div class="col-md-2">  </div>                                        
-            
-             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
-                    </div>                    
-             </div>
+                <div class="col-md-2">
+                 <div class="form-group">
+                    <label for="" class="control-label">
+                        <!--CUARTOS - Partido 60 W55 vs W56 -->
+                        {{mundial.content.eliminatorias.cuartos[3].local}} 
+                        {{mundial.content.eliminatorias.cuartos[3].nombreLocal}}
+                    </label>
+                    <div class="input-group"> 
+                        <span class="input-group-addon">W55</span>                     
+                    <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.cuartos[3].golLocal">
+                    </div>
+                </div>
+            </div>
                 
         </div> 
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 55 1F vs 2E -->
+                            {{mundial.content.eliminatorias.seeds[6].visitante}} 
+                            {{mundial.content.eliminatorias.seeds[6].nombreVisitante}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">2E</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[6].golVisitante">
+                        </div>
                     </div>                    
              </div>             
         </div> 
@@ -315,18 +488,32 @@
               <div class="col-md-2"></div>                                    
               
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--SEMIS - Partido 62 W59 vs W60 -->
+                            {{mundial.content.eliminatorias.semis[1].visitante}} 
+                            {{mundial.content.eliminatorias.semis[1].nombreVisitante}}
+                        </label>
+                        <div class="input-group"> 
+                            <span class="input-group-addon">W60</span>                     
+                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.semis[1].golVisitante">
+                        </div>
                     </div>                   
              </div>
         </div>
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 56 1H vs 2G -->
+                            {{mundial.content.eliminatorias.seeds[7].local}} 
+                            {{mundial.content.eliminatorias.seeds[7].nombreLocal}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">1H</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[7].golLocal">
+                        </div>
                     </div>                    
              </div>                
         </div>
@@ -335,19 +522,33 @@
             <div class="col-md-2">  </div>                                        
             
              <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
-                    </div>                    
+                    <div class="form-group">
+                    <label for="" class="control-label">
+                        <!--CUARTOS - Partido 60 W55 vs W56 -->
+                        {{mundial.content.eliminatorias.cuartos[3].visitante}} 
+                        {{mundial.content.eliminatorias.cuartos[3].nombreVisitante}}
+                    </label>
+                    <div class="input-group"> 
+                        <span class="input-group-addon">W56</span>                     
+                    <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.cuartos[3].golVisitante">
+                    </div>
+                </div>                    
              </div>
                 
         </div> 
 
         <div class="row">
             <div class="col-md-2">
-                    <div class="input-group">
-                        <span class="input-group-addon">{{mundial.content.eliminatorias.seeds[0].local}} {{mundial.content.eliminatorias.seeds[0].nombreLocal}}</span>                      
-                        <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[0].golLocal">
+                    <div class="form-group">
+                        <label for="" class="control-label">
+                            <!--OCTAVOS - Partido 56 1H vs 2G -->
+                            {{mundial.content.eliminatorias.seeds[7].visitante}} 
+                            {{mundial.content.eliminatorias.seeds[7].nombreVisitante}}
+                        </label> 
+                        <div class="input-group"> 
+                            <span class="input-group-addon">2G</span>                       
+                            <input type="number" class="form-control" ng-model="mundial.content.eliminatorias.seeds[7].golVisitante">
+                        </div>
                     </div>                    
              </div>             
         </div>

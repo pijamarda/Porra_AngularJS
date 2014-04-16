@@ -148,13 +148,13 @@
 		"cuartos":[{"id":57, "local":1,"visitante":2 },
 					{"id":58, "local":5,"visitante":6 },
 					{"id":59, "local":9,"visitante":10 },
-					{"id":60, "local":13,"visitante":14 },
+					{"id":60, "local":13,"visitante":14 }
 		],
 		"semis":[{"id":61, "local":1,"visitante":2 },
 				{"id":62, "local":5,"visitante":6 }				
 		],
-		"consolacion":[{"id":63, "local":5,"visitante":6 }],			
-		"final":[{"id":64, "local":5,"visitante":6 }],			
+		"consolacion":{"id":63, "local":5,"visitante":6 },			
+		"final":{"id":64, "local":5,"visitante":6 },			
 		
 		"primero":{"id":1, "nombre":"brasil"}, 
 		"segundo":{"id":1, "nombre":"brasil"}, 
@@ -226,6 +226,6 @@
 		{"id":61,"local": 2,"visitante": 0},
 		{"id":62,"local": 2,"visitante": 0},
 		{"id":63,"local": 2,"visitante": 0},
-		{"id":64,"local": 25,"visitante": 26}	
+		{"id":64,"local": 3,"visitante": 1}	
 	]
 }

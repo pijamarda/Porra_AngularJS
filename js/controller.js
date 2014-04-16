@@ -49,6 +49,37 @@ App.factory("Mundial",function($http){
 				}
 			}
 			//console.log($scope.mundial.grupos[i].partidos[j]);
+		for (var i=0; i<obj.content.eliminatorias.cuartos.length; i++)			
+			for (var x=0; x<obj.content.resultados.length;x++)
+			{
+				if (obj.content.resultados[x].id == obj.content.eliminatorias.cuartos[i].id)
+				{
+					obj.content.eliminatorias.cuartos[i].golLocal = obj.content.resultados[x].local;
+					obj.content.eliminatorias.cuartos[i].golVisitante = obj.content.resultados[x].visitante;
+				}
+			}
+		for (var i=0; i<obj.content.eliminatorias.semis.length; i++)			
+			for (var x=0; x<obj.content.resultados.length;x++)
+			{
+				if (obj.content.resultados[x].id == obj.content.eliminatorias.semis[i].id)
+				{
+					obj.content.eliminatorias.semis[i].golLocal = obj.content.resultados[x].local;
+					obj.content.eliminatorias.semis[i].golVisitante = obj.content.resultados[x].visitante;
+				}
+			}
+					
+		for (var x=0; x<obj.content.resultados.length;x++)
+		{
+			if (obj.content.resultados[x].id == obj.content.eliminatorias.final.id)
+			{
+				obj.content.eliminatorias.final.golLocal = obj.content.resultados[x].local;
+				obj.content.eliminatorias.final.golVisitante = obj.content.resultados[x].visitante;
+				obj.content.eliminatorias.primero.golVisitante = obj.content.resultados[x].visitante;
+			}
+		}
+		obj.content.eliminatorias.final.golLocal = obj.content.resultados[63].local;
+		obj.content.eliminatorias.final.golVisitante = obj.content.resultados[63].visitante;
+			
 			
     });    
 
@@ -477,23 +508,181 @@ App.controller('MundialCtrl', function($scope, $http, Mundial)
     		var partidos =  mundialTemp.content.resultados;
     		if (eliminatorias && partidos)
     		{
-    			for (var x=0; x<eliminatorias.seeds.length; x++)
+    			if (eliminatorias.seeds[0].golLocal > eliminatorias.seeds[0].golVisitante)
     			{
-	    			var p1 = eliminatorias.seeds[x].id;
-	    			for (var i=0; i<partidos.length; i++)
-	    				if (partidos[i].id == p1)
-			    			if (partidos[i].local > partidos[i].visitante)
-			    			{
-			    				$scope.mundial.content.eliminatorias.cuartos[x].local=eliminatorias.seeds[x].local;
-			    				$scope.mundial.content.eliminatorias.cuartos[x].Nombrelocal=$scope.findEquipo(eliminatorias.seeds[x].local);
-			    			}
-			    			else
-			    			{
-			    				$scope.mundial.content.eliminatorias.cuartos[x].local=eliminatorias.seeds[x].visitante;
-			    				$scope.mundial.content.eliminatorias.cuartos[x].Nombrelocal=$scope.findEquipo(eliminatorias.seeds[x].visitante);
-			    			}
-			    	
-		    	}
+    				$scope.mundial.content.eliminatorias.cuartos[0].local = eliminatorias.seeds[0].local;
+    				$scope.mundial.content.eliminatorias.cuartos[0].nombreLocal = $scope.findEquipo(eliminatorias.seeds[0].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[0].local = eliminatorias.seeds[0].visitante;
+    				$scope.mundial.content.eliminatorias.cuartos[0].nombreLocal = $scope.findEquipo(eliminatorias.seeds[0].visitante);
+    			}
+
+    			if (eliminatorias.seeds[1].golLocal > eliminatorias.seeds[1].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[0].visitante = eliminatorias.seeds[1].local;
+    				$scope.mundial.content.eliminatorias.cuartos[0].nombreVisitante = $scope.findEquipo(eliminatorias.seeds[1].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[0].visitante = eliminatorias.seeds[1].visitante;
+    				$scope.mundial.content.eliminatorias.cuartos[0].nombreVisitante = $scope.findEquipo(eliminatorias.seeds[1].visitante);
+    			}
+
+    			if (eliminatorias.seeds[4].golLocal > eliminatorias.seeds[4].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[1].local = eliminatorias.seeds[4].local;
+    				$scope.mundial.content.eliminatorias.cuartos[1].nombreLocal = $scope.findEquipo(eliminatorias.seeds[4].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[1].local = eliminatorias.seeds[4].visitante;
+    				$scope.mundial.content.eliminatorias.cuartos[1].nombreLocal = $scope.findEquipo(eliminatorias.seeds[4].visitante);
+    			}
+
+    			if (eliminatorias.seeds[5].golLocal > eliminatorias.seeds[5].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[1].visitante = eliminatorias.seeds[5].local;
+    				$scope.mundial.content.eliminatorias.cuartos[1].nombreVisitante = $scope.findEquipo(eliminatorias.seeds[5].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[1].visitante = eliminatorias.seeds[5].visitante;
+    				$scope.mundial.content.eliminatorias.cuartos[1].nombreVisitante = $scope.findEquipo(eliminatorias.seeds[5].visitante);
+    			}
+
+    			//------------------
+
+    			if (eliminatorias.seeds[2].golLocal > eliminatorias.seeds[2].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[2].local = eliminatorias.seeds[2].local;
+    				$scope.mundial.content.eliminatorias.cuartos[2].nombreLocal = $scope.findEquipo(eliminatorias.seeds[2].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[2].local = eliminatorias.seeds[2].visitante;
+    				$scope.mundial.content.eliminatorias.cuartos[2].nombreLocal = $scope.findEquipo(eliminatorias.seeds[2].visitante);
+    			}
+
+    			if (eliminatorias.seeds[3].golLocal > eliminatorias.seeds[3].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[2].visitante = eliminatorias.seeds[3].local;
+    				$scope.mundial.content.eliminatorias.cuartos[2].nombreVisitante = $scope.findEquipo(eliminatorias.seeds[3].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[2].visitante = eliminatorias.seeds[3].visitante;
+    				$scope.mundial.content.eliminatorias.cuartos[2].nombreVisitante = $scope.findEquipo(eliminatorias.seeds[3].visitante);
+    			}
+
+    			if (eliminatorias.seeds[6].golLocal > eliminatorias.seeds[6].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[3].local = eliminatorias.seeds[6].local;
+    				$scope.mundial.content.eliminatorias.cuartos[3].nombreLocal = $scope.findEquipo(eliminatorias.seeds[6].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[3].local = eliminatorias.seeds[6].visitante;
+    				$scope.mundial.content.eliminatorias.cuartos[3].nombreLocal = $scope.findEquipo(eliminatorias.seeds[6].visitante);
+    			}
+
+    			if (eliminatorias.seeds[7].golLocal > eliminatorias.seeds[7].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[3].visitante = eliminatorias.seeds[7].local;
+    				$scope.mundial.content.eliminatorias.cuartos[3].nombreVisitante = $scope.findEquipo(eliminatorias.seeds[7].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.cuartos[3].visitante = eliminatorias.seeds[7].visitante;
+    				$scope.mundial.content.eliminatorias.cuartos[3].nombreVisitante = $scope.findEquipo(eliminatorias.seeds[7].visitante);
+    			}
+
+    			// CUARTOS
+
+    			if (eliminatorias.cuartos[0].golLocal > eliminatorias.cuartos[0].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.semis[0].local = eliminatorias.cuartos[0].local;
+    				$scope.mundial.content.eliminatorias.semis[0].nombreLocal = $scope.findEquipo(eliminatorias.cuartos[0].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.semis[0].local = eliminatorias.cuartos[0].visitante;
+    				$scope.mundial.content.eliminatorias.semis[0].nombreLocal = $scope.findEquipo(eliminatorias.cuartos[0].visitante);
+    			}
+
+    			if (eliminatorias.cuartos[1].golLocal > eliminatorias.cuartos[1].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.semis[0].visitante = eliminatorias.cuartos[1].local;
+    				$scope.mundial.content.eliminatorias.semis[0].nombreVisitante = $scope.findEquipo(eliminatorias.cuartos[1].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.semis[0].visitante = eliminatorias.cuartos[1].visitante;
+    				$scope.mundial.content.eliminatorias.semis[0].nombreVisitante = $scope.findEquipo(eliminatorias.cuartos[1].visitante);
+    			}
+
+    			//----------
+
+    			if (eliminatorias.cuartos[2].golLocal > eliminatorias.cuartos[2].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.semis[1].local = eliminatorias.cuartos[2].local;
+    				$scope.mundial.content.eliminatorias.semis[1].nombreLocal = $scope.findEquipo(eliminatorias.cuartos[2].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.semis[1].local = eliminatorias.cuartos[2].visitante;
+    				$scope.mundial.content.eliminatorias.semis[1].nombreLocal = $scope.findEquipo(eliminatorias.cuartos[2].visitante);
+    			}
+
+    			if (eliminatorias.cuartos[3].golLocal > eliminatorias.cuartos[3].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.semis[1].visitante = eliminatorias.cuartos[3].local;
+    				$scope.mundial.content.eliminatorias.semis[1].nombreVisitante = $scope.findEquipo(eliminatorias.cuartos[3].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.semis[1].visitante = eliminatorias.cuartos[3].visitante;
+    				$scope.mundial.content.eliminatorias.semis[1].nombreVisitante = $scope.findEquipo(eliminatorias.cuartos[3].visitante);
+    			}
+
+    			// SEMIS
+
+    			if (eliminatorias.semis[0].golLocal > eliminatorias.semis[0].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.final.local = eliminatorias.semis[0].local;
+    				$scope.mundial.content.eliminatorias.final.nombreLocal = $scope.findEquipo(eliminatorias.semis[0].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.final.local = eliminatorias.semis[0].visitante;
+    				$scope.mundial.content.eliminatorias.final.nombreLocal = $scope.findEquipo(eliminatorias.semis[0].visitante);
+    			}
+
+    			if (eliminatorias.semis[1].golLocal > eliminatorias.semis[1].golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.final.visitante = eliminatorias.semis[1].local;
+    				$scope.mundial.content.eliminatorias.final.nombreVisitante = $scope.findEquipo(eliminatorias.semis[1].local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.final.visitante = eliminatorias.semis[1].visitante;
+    				$scope.mundial.content.eliminatorias.final.nombreVisitante = $scope.findEquipo(eliminatorias.semis[1].visitante);
+    			}
+
+    			//FINAL
+
+    			if (eliminatorias.final.golLocal > eliminatorias.final.golVisitante)
+    			{
+    				$scope.mundial.content.eliminatorias.primero.id = eliminatorias.final.local;
+    				$scope.mundial.content.eliminatorias.primero.nombre = $scope.findEquipo(eliminatorias.final.local);
+    			}
+    			else
+    			{
+    				$scope.mundial.content.eliminatorias.primero.id = eliminatorias.final.visitante;
+    				$scope.mundial.content.eliminatorias.primero.nombre = $scope.findEquipo(eliminatorias.final.visitante);
+    			}		
+    			
     		}
     	}
 	    
