@@ -1,0 +1,115 @@
+<!-- partials/state2.html -->
+<h1>Test 2</h1>
+<hr/>
+<div ng-controller="MundialCtrl">
+
+    <div class="tournament16-wrap">
+        <div class="round5-top winner5">Winner</div>
+        <div class="round4-topwrap">
+            <div class="round4-top">Top Winner</div>
+            <div class="round3-topwrap">
+                <div class="round3-top">1/8 winner</div>
+                <div class="round2-topwrap">
+                    <div class="round2-top">1-16 winner</div>
+                    <div class="round1-top">
+                        {{mundial.content.eliminatorias.seeds[0].local}} - 
+                        {{mundial.content.eliminatorias.seeds[0].name}}
+                        <input type="number" ng-model="mundial.content.eliminatorias.seeds.[0].golLocal">
+                        <input type="number" ng-model="mundial.content.eliminatorias.seeds.[0].golVisitante">
+                    </div>
+                    <div class="form-inline">                                
+                            
+                            <div class="form-group" >                                    
+                                <input type="number" class="form-control" 
+                                ng-model="mundial.content.eliminatorias.seeds.[0].golLocal">
+                            </div>
+                            <div class="form-group" >                                
+                                <input type="number" class="form-control" 
+                                ng-model="mundial.content.eliminatorias.seeds.[0].golVisitante">
+                            </div>                                                             
+                        </div>
+                    <div class="round1-bottom">{{mundial.content.eliminatorias.seeds[0].visitante}} - 
+                    {{mundial.content.eliminatorias.seeds[15].name}}</div>
+                </div>
+                <div class="round2-bottomwrap">
+                    <div class="round2-bottom">8-9 winner</div>
+                    <div class="round1-top">{{mundial.content.eliminatorias.seeds[7].id}} - 
+                    {{mundial.content.eliminatorias.seeds[7].name}}</div>
+                    <div class="round1-bottom">{{mundial.content.eliminatorias.seeds[8].id}} - 
+                    {{mundial.content.eliminatorias.seeds[8].name}}</div>
+                </div>
+            </div>
+            <div class="round3-bottomwrap">
+                <div class="round3-bottom">4/5 winner</div>
+                <div class="round2-topwrap">
+                    <div class="round2-top">4-13 winner</div>
+                    <div class="round1-top">{{mundial.content.eliminatorias.seeds[3].id}} - 
+                    {{mundial.content.eliminatorias.seeds[3].name}}</div>
+                    <div class="round1-bottom">{{mundial.content.eliminatorias.seeds[12].id}} - 
+                    {{mundial.content.eliminatorias.seeds[12].name}}</div>
+                </div>
+                <div class="round2-bottomwrap">
+                    <div class="round2-bottom">5-12 winner</div>
+                    <div class="round1-top">{{mundial.content.eliminatorias.seeds[4].id}} - 
+                    {{mundial.content.eliminatorias.seeds[15].name}}</div>
+                    <div class="round1-bottom">{{mundial.content.eliminatorias.seeds[11].id}} - 
+                    {{mundial.content.eliminatorias.seeds[11].name}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="round4-bottomwrap">
+            <div class="round4-bottom">Bottom Winner</div>
+            <div class="round3-topwrap">
+                <div class="round3-top">2/7 winner</div>
+                <div class="round2-topwrap">
+                    <div class="round2-top">2-15 winner</div>
+                    <div class="round1-top">{{mundial.content.eliminatorias.seeds[1].id}} - 
+                    {{mundial.content.eliminatorias.seeds[1].name}}</div>
+                    <div class="round1-bottom">{{mundial.content.eliminatorias.seeds[14].id}} - 
+                    {{mundial.content.eliminatorias.seeds[14].name}}</div>
+                </div>
+                <div class="round2-bottomwrap">
+                    <div class="round2-bottom">7-10 winner</div>
+                    <div class="round1-top">{{mundial.content.eliminatorias.seeds[6].id}} - 
+                    {{mundial.content.eliminatorias.seeds[6].name}}</div>
+                    <div class="round1-bottom">{{mundial.content.eliminatorias.seeds[9].id}} - 
+                    {{mundial.content.eliminatorias.seeds[9].name}}</div>
+                </div>
+            </div>
+            <div class="round3-bottomwrap">
+                <div class="round3-bottom">3/6 winner</div>
+                <div class="round2-topwrap">
+                    <div class="round2-top">3-14 winner</div>
+                    <div class="round1-top">{{mundial.content.eliminatorias.seeds[2].id}} - 
+                    {{mundial.content.eliminatorias.seeds[2].name}}</div>
+                    <div class="round1-bottom">{{mundial.content.eliminatorias.seeds[13].id}} - 
+                    {{mundial.content.eliminatorias.seeds[13].name}}</div>
+                </div>
+                <div class="round2-bottomwrap">
+                    <div class="round2-bottom">6-11 winner</div>
+                    <div class="round1-top">{{mundial.content.eliminatorias.seeds[5].id}} - 
+                    {{mundial.content.eliminatorias.seeds[5].name}}</div>
+                    <div class="round1-bottom">{{mundial.content.eliminatorias.seeds[10].id}} - 
+                    {{mundial.content.eliminatorias.seeds[10].name}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-repeat="grupo in mundial.content.grupos">
+        <h5>{{grupo.nombre}}</h5>
+        <div class="row">                    
+            <div class="col-md-4">                
+                <ul>   
+                    <li ng-repeat="equipo in grupo.pasan">                                            
+                        {{equipo.id}} - {{findEquipo(equipo.id)}}
+                    </li>     
+                </ul>                    
+            </div>            
+        </div>
+    </div>
+
+    
+
+
+</div> 

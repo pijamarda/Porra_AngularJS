@@ -134,6 +134,34 @@
 		}
 	],
 
+	"eliminatorias":
+	{
+		"seeds":[{"id":49, "local":1,"visitante":2 },
+				{"id":50, "local":5,"visitante":6 },
+				{"id":51, "local":9,"visitante":10 },
+				{"id":52, "local":13,"visitante":14 },
+				{"id":53, "local":17,"visitante":18 },
+				{"id":54, "local":21,"visitante":22 },
+				{"id":55, "local":25,"visitante":26 },
+				{"id":56, "local":29,"visitante":30 }				
+		],
+		"cuartos":[{"id":57, "local":1,"visitante":2 },
+					{"id":58, "local":5,"visitante":6 },
+					{"id":59, "local":9,"visitante":10 },
+					{"id":60, "local":13,"visitante":14 },
+		],
+		"semis":[{"id":61, "local":1,"visitante":2 },
+				{"id":62, "local":5,"visitante":6 }				
+		],
+		"consolacion":[{"id":63, "local":5,"visitante":6 }],			
+		"final":[{"id":64, "local":5,"visitante":6 }],			
+		
+		"primero":{"id":1, "nombre":"brasil"}, 
+		"segundo":{"id":1, "nombre":"brasil"}, 
+		"tercero":{"id":1, "nombre":"brasil"}, 
+		"cuarto":{"id":1, "nombre":"brasil"}
+	},
+
 	"resultados":[
 		{"id":1,"local": 2,"visitante": 3},
 		{"id":2,"local": 1,"visitante": 0},
