@@ -1,5 +1,5 @@
 <!-- partials/state1.html -->
-<h1>Test 1</h1>
+<h1>Fase de Grupos</h1>
 <hr/>
 <div ng-controller="MundialCtrl"> 
     <div ng-repeat="grupo in mundial.content.grupos">
@@ -8,6 +8,7 @@
             <div class="col-md-4">                
                 <ul>   
                     <li ng-repeat="partido in grupo.partidos">
+                        <h5 gravatar-image="partido.local"> </h5>
                         <h5>{{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}</h5>
                         <div class="form-inline">                                
                             
@@ -33,7 +34,7 @@
                         <th> Gf </th> 
                         <th> Gc </th> 
                         <th> Puntos </th>
-                        <th> Puntos - Binded </th>
+                        
                     </tr>
                     <tr ng-repeat="equipo in grupo.equipos">
                         <td> {{findEquipo(equipo.id)}} </td> 
@@ -44,12 +45,16 @@
                         <td> {{calculaGolesFavor(equipo.id)}} </td>
                         <td> {{calculaGolesContra(equipo.id)}} </td>
                         <td> {{calculaPuntos(equipo.id)}} </td>
-                        <td> {{equipo.puntos}} </td>
+                        
                     </tr>
-                    <div ng-repeat="team in grupo.pasan">
-                    	{{team.id}} - {{findEquipo(team.id)}}
-                    </div>
-                </table>    
+                    
+                </table>
+                Pasan los siguientes equipos:
+                <ol>
+                <div ng-repeat="team in grupo.pasan">
+                        <li>{{findEquipo(team.id)}}</li>
+                </div>   
+                </ol>
             </div>
         </div>
     </div>  

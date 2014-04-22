@@ -1,5 +1,5 @@
 <!-- partials/state2.html -->
-<h1>Test 2</h1>
+<h1>Eliminatorias</h1>
 <hr/>
 <div ng-controller="MundialCtrl">
 
@@ -25,9 +25,9 @@
         
         <div class="row">
             
-            <div class="col-md-2">  </div>                                        
+            <div class="col-md-2"  >  </div>                                        
             
-             <div class="col-md-2">
+             <div class="col-md-2" id="round2-left">
                     <div class="form-group">
                         <label for="" class="control-label">
                             <!--CUARTOS - Partido 57 W49 vs W50 -->                            
@@ -59,11 +59,11 @@
         </div> 
 
         <div class="row">
-            <div class="col-md-2"></div>
+            <div class="col-md-2" id="round3-left"></div>
                                        
-            <div class="col-md-2"></div>                                    
+            <div class="col-md-2" id="round3-left"></div>                                    
               
-             <div class="col-md-2">
+             <div class="col-md-2"  id="round3-left">
                     <div class="form-group">
                         <label for="" class="control-label">
                             <!--SEMIS - Partido 61 W57 vs W58 -->
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-md-2">  </div>                                        
             
-             <div class="col-md-2">
+             <div class="col-md-2" id="round2-left">
                     <div class="form-group">
                         <label for="" class="control-label">
                             <!--CUARTOS - Partido 57 W49 vs W50 -->                            
@@ -166,7 +166,7 @@
 
         <div class="row">
             <div class="col-md-2">  </div>                                        
-                <div class="col-md-2">
+                <div class="col-md-2"  id="round2-left">
                  <div class="form-group">
                     <label for="" class="control-label">
                         <!--CUARTOS - Partido 58 W53 vs W54 -->
@@ -237,7 +237,7 @@
         <div class="row">
             <div class="col-md-2">  </div>                                        
             
-             <div class="col-md-2">
+             <div class="col-md-2"  id="round2-left">
                     <div class="form-group">
                     <label for="" class="control-label">
                         <!--CUARTOS - Partido 58 W53 vs W54 -->
@@ -308,7 +308,7 @@
             
             <div class="col-md-2">  </div>                                        
             
-             <div class="col-md-2">
+             <div class="col-md-2"  id="round2-left">
                     <div class="form-group">
                         <label for="" class="control-label">
                             <!--CUARTOS - Partido 59 W51 vs W52 -->
@@ -379,7 +379,7 @@
         <div class="row">
             <div class="col-md-2">  </div>                                        
             
-             <div class="col-md-2">
+             <div class="col-md-2"  id="round2-left">
                     <div class="form-group">
                         <label for="" class="control-label">
                             <!--CUARTOS - Partido 59 W51 vs W52 -->
@@ -450,7 +450,7 @@
 
         <div class="row">
             <div class="col-md-2">  </div>                                        
-                <div class="col-md-2">
+                <div class="col-md-2"  id="round2-left">
                  <div class="form-group">
                     <label for="" class="control-label">
                         <!--CUARTOS - Partido 60 W55 vs W56 -->
@@ -521,7 +521,7 @@
         <div class="row">
             <div class="col-md-2">  </div>                                        
             
-             <div class="col-md-2">
+             <div class="col-md-2"  id="round2-left">
                     <div class="form-group">
                     <label for="" class="control-label">
                         <!--CUARTOS - Partido 60 W55 vs W56 -->
@@ -562,16 +562,13 @@
         <h5>{{grupo.nombre}}</h5>
         <div class="row">                    
             <div class="col-md-4">                
-                <ul>   
+                <ol>   
                     <li ng-repeat="equipo in grupo.pasan">                                            
-                        {{equipo.id}} - {{findEquipo(equipo.id)}}
+                        {{findEquipo(equipo.id)}}
                     </li>     
-                </ul>                    
+                </ol>                    
             </div>            
         </div>
     </div>
-
-    
-
 
 </div> 

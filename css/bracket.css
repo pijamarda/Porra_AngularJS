@@ -3,23 +3,23 @@
 }
 
 /****** round 1 ******/
-.round1-top, .round1-bottom {
+#round1-top, #round1-bottom {
 	float: left;
 	width: 150px;
 	height: 2em;
 }
 
-.round1-top {
+#round1-top {
 	line-height: 2.5em;
 }
 
-.round2-topwrap .round1-bottom {
+#round2-topwrap #round1-bottom {
 	width: 149px;
 	border-top: 1px solid #000;
 	border-right: 1px solid #000;
 }
 
-.round2-bottomwrap .round1-top {
+#round2-bottomwrap #round1-top {
 	width: 149px;
 	border-bottom: 1px solid #000;
 	border-right: 1px solid #000;

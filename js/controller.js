@@ -86,6 +86,21 @@ App.factory("Mundial",function($http){
     return obj;
 });
 
+App.directive('gravatarImage', function () {
+         return {
+             restrict:"EAC",
+             link:function (scope, elm, attrs) {
+                 // by default the values will come in as undefined so we need to setup a
+                 // watch to notify us when the value changes
+                 scope.$watch(attrs.gravatarImage, function (value) {
+                     elm.text(value);
+                     var tag='<img src="img/br.png">';
+                     elm.append(tag);
+             	});
+         	}
+         };
+
+}); 
 
 App.controller('MundialCtrl', function($scope, $http, Mundial) 
 {
@@ -126,6 +141,13 @@ App.controller('MundialCtrl', function($scope, $http, Mundial)
 		for (var i=0; i<equipos.length; i++)
 	    	if (equipos[i].id == equipo)
 	    		return equipos[i].nombre;
+	};
+
+	$scope.findBandera = function(equipo) {
+		var equipos = $scope.mundial.content.equipos
+		for (var i=0; i<equipos.length; i++)
+	    	if (equipos[i].id == equipo)
+	    		return  '<img src="img/'+equipos[i].flag+'.png">'  ;
 	};
 
 	$scope.findEquipoLocal = function(partido) {
