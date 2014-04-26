@@ -94,7 +94,58 @@ App.directive('gravatarImage', function () {
                  // watch to notify us when the value changes
                  scope.$watch(attrs.gravatarImage, function (value) {
                      elm.text(value);
-                     var tag='<img src="img/br.png">';
+                     //console.log(value);
+                     var equipos = scope.$parent.$parent.findBandera(value);
+                     //console.log(equipos);
+                     var tempFlag = 'br';
+                     tempFlag = equipos;
+                     if (false)
+                     {
+	                     for (var i=0; i< equipos.length; i)
+	                     {
+	                     	if (equipos[i].id == value)
+	                     	{
+	                     		tempFlag = equipos[i].flag;
+	                     		//console.log(tempFlag);
+	                     	}
+	                     }
+	                 }
+                     var tag='<img src="img/'+tempFlag+'.png">';
+                     elm.append(tag);
+             	});
+         	}
+         };
+
+});
+
+App.directive('equipoBandera', function () {
+         return {
+             restrict:"EAC",
+             link:function (scope, elm, attrs) {
+                 // by default the values will come in as undefined so we need to setup a
+                 // watch to notify us when the value changes
+                 scope.$watch(attrs.equipoBandera, function (value) {
+                     elm.text(value);
+                     //console.log(value);
+                     var equipos = scope.$parent.$parent.findBandera(value);
+                     var nombreEquipo = scope.$parent.$parent.findEquipo(value);
+                     //console.log(elm);
+                     var tempFlag = 'br';
+                     tempFlag = equipos;
+                     var espacio = '   '
+                     if (false)
+                     {
+	                     for (var i=0; i< equipos.length; i)
+	                     {
+	                     	if (equipos[i].id == value)
+	                     	{
+	                     		tempFlag = equipos[i].flag;
+	                     		//console.log(tempFlag);
+	                     	}
+	                     }
+	                 }
+                     var tag=espacio+'<img src="img/'+tempFlag+'.png">'+espacio+nombreEquipo;
+                     console.log(tag);
                      elm.append(tag);
              	});
          	}
@@ -147,7 +198,7 @@ App.controller('MundialCtrl', function($scope, $http, Mundial)
 		var equipos = $scope.mundial.content.equipos
 		for (var i=0; i<equipos.length; i++)
 	    	if (equipos[i].id == equipo)
-	    		return  '<img src="img/'+equipos[i].flag+'.png">'  ;
+	    		return  equipos[i].flag;
 	};
 
 	$scope.findEquipoLocal = function(partido) {
@@ -453,8 +504,8 @@ App.controller('MundialCtrl', function($scope, $http, Mundial)
 	    				}
     				}
 
-    				if (i==0)
-    					console.log(idPrimeroActual+" "+idSegundoActual);
+    				//if (i==0)
+    				//	console.log(idPrimeroActual+" "+idSegundoActual);
     				$scope.mundial.content.grupos[i].pasan[0].id = idPrimeroActual;
     				$scope.mundial.content.grupos[i].pasan[1].id = idSegundoActual;
 

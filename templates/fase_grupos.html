@@ -8,17 +8,8 @@
             <div class="col-md-4">                
                 <ul>   
                     <li ng-repeat="partido in grupo.partidos">
-                        <h5 gravatar-image="partido.local"> </h5>
-                        <h5>{{findEquipo(partido.local)}} vs {{findEquipo(partido.visitante)}}</h5>
-                        <div class="form-inline">                                
-                            
-                            <div class="form-group" >                                    
-                                <input type="number" class="form-control" ng-model="partido.golLocal">
-                            </div>
-                            <div class="form-group" >                                
-                                <input type="number" class="form-control" ng-model="partido.golVisitante">
-                            </div>                                                             
-                        </div>
+                        <h5 equipo-bandera="partido.local"> </h5> <input type="number" ng-model="partido.golLocal"> 
+                        vs <h5 equipo-bandera="partido.visitante"> </h5> <input type="number" ng-model="partido.golVisitante">
                         
                     </li>     
                 </ul>                    
@@ -37,7 +28,7 @@
                         
                     </tr>
                     <tr ng-repeat="equipo in grupo.equipos">
-                        <td> {{findEquipo(equipo.id)}} </td> 
+                        <td equipo-bandera="equipo.id"> {{findEquipo(equipo.id)}} </td> 
                         <td> {{calculaPartidosJugados(equipo.id)}} </td> 
                         <td> {{calculaGanados(equipo.id)}} </td>
                         <td> {{calculaEmpatados(equipo.id)}} </td>
