@@ -5,16 +5,23 @@
     <div ng-repeat="grupo in mundial.content.grupos">
         <h2>{{grupo.nombre}}</h2>
         <div class="row">                    
-            <div class="col-md-4">                
+            <div class="col-md-6">                
                 <ul>   
                     <li ng-repeat="partido in grupo.partidos">
-                        <h5 equipo-bandera="partido.local"> </h5> <input type="number" ng-model="partido.golLocal"> 
-                        vs <h5 equipo-bandera="partido.visitante"> </h5> <input type="number" ng-model="partido.golVisitante">
+                        <div style="padding-bottom:10px">
+                        <hola equipo-bandera="partido.local"> </hola> 
+                        <input type="number" ng-model="partido.golLocal" style="width:50px"> 
+                        
+                        vs 
+                        
+                        <hola equipo-bandera="partido.visitante"> </hola> 
+                        <input type="number" ng-model="partido.golVisitante" style="width:50px">
+                        </div>
                         
                     </li>     
                 </ul>                    
             </div>
-            <div class="col-md-4" style="padding-top:30px">
+            <div class="col-md-4" >
                 <table class="table table-striped">
                     <tr>
                         <th> Equipo </th> 

@@ -16,6 +16,10 @@ App.config(function($stateProvider, $urlRouterProvider) {
       url: "/eliminatorias",
       templateUrl: "templates/eliminatorias.html"
     })
+    .state('puntos', {
+      url: "/puntos",
+      templateUrl: "templates/puntos.html"
+    })
 });
 
 App.factory("Mundial",function($http){
@@ -86,6 +90,18 @@ App.factory("Mundial",function($http){
     return obj;
 });
 
+App.factory("Resultados",function($http){
+
+    var obj = {};
+
+    $http.get('resultado.json').success(function(data) {
+        // you can do some processing here
+        obj.content = data;			
+    });    
+
+    return obj;
+});
+
 App.directive('gravatarImage', function () {
          return {
              restrict:"EAC",
@@ -132,7 +148,7 @@ App.directive('equipoBandera', function () {
                      //console.log(elm);
                      var tempFlag = 'br';
                      tempFlag = equipos;
-                     var espacio = '   '
+                     var espacio = '   ';
                      if (false)
                      {
 	                     for (var i=0; i< equipos.length; i)
@@ -153,12 +169,12 @@ App.directive('equipoBandera', function () {
 
 }); 
 
-App.controller('MundialCtrl', function($scope, $http, Mundial) 
+App.controller('MundialCtrl', function($scope, $http, Mundial, Resultados) 
 {
 
 	//$scope.mundial = {};
 	$scope.mundial = Mundial;
-	//$scope.partidos = {};
+	$scope.partidos = Resultados;
 	/*
 	$http.get('mundial2014.json')
 		.then(function(res)
@@ -181,11 +197,7 @@ App.controller('MundialCtrl', function($scope, $http, Mundial)
 				}
 		});
 	*/
-	/*$http.get('resultado.json')
-		.then(function(res)
-		{
-		  $scope.partidos = res.data;                
-		});*/
+	
 
 	$scope.findEquipo = function(equipo) {
 		var equipos = $scope.mundial.content.equipos
@@ -464,6 +476,7 @@ App.controller('MundialCtrl', function($scope, $http, Mundial)
 
 	$scope.$watch('mundial', function() {	
     	var mundialTemp = $scope.mundial;
+    	var partidosTemp = $scope.partidos;
     	var idPrimero = 0;
     	var idSegundo = 0;
     	if (mundialTemp.content)
@@ -757,6 +770,10 @@ App.controller('MundialCtrl', function($scope, $http, Mundial)
     			}		
     			
     		}
+    	}
+    	if (partidosTemp)
+    	{
+    		//hola
     	}
 	    
 	}, true);
